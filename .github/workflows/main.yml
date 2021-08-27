@@ -1,0 +1,12 @@
+name: main
+on: [push]
+jobs:
+  test-dockerfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build & Package
+        uses: /checkout@v2
+      - name: Run
+        uses: 
+      - name: Inject report
+        uses:
