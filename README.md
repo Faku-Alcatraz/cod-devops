@@ -58,3 +58,14 @@ El apiKey les llegara por mail a cada uno.
 - Generen un nuevo proyecto a partir del boton "Use this template" en la parte superior
 - Mantengan la estructura de directorios y el archivo LICENCE
 - Reemplacen el contenido del README con la informacion necesaria para entender y ejecutar el proyecto
+
+# Comienzo de nuestro ReadMe (Lippia-Open-Challenge-2021)
+
+## Cypress runner
+
+## Reference Links
+
+- https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/
+- https://github.com/bahmutov/cypress-gh-action-included
+- https://github.com/cypress-io/cypress-docker-images/blob/master/included/8.3.0/Dockerfile (base Dockerfile)
+- 
