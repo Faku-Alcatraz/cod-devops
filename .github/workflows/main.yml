@@ -4,9 +4,15 @@ jobs:
   test-dockerfile:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Build & Package
-        uses: /checkout@v2
-      - name: Run
-        uses: 
-      - name: Inject report
-        uses:
+        uses: VaultVulp/gp-docker-action@1.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
+          image-name: cod-cypressrunner # Provide Docker image name
+          image-tag: 1.0.0 # Provide Docker image tag
+      #- name: Run
+       # uses: 
+      #- name: Inject report
+       # uses:
+      
