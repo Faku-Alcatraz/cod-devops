@@ -1,18 +1,18 @@
 name: main
 on: [push]
 jobs:
-  test-dockerfile:
+  test & package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Linter
+        uses: hadolint/hadolint-action@v1.5.0
+        with:
+          dockerfile: Dockerfile      
       - name: Build & Package
         uses: VaultVulp/gp-docker-action@1.2.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
-          image-name: cod-cypressrunner # Provide Docker image name
+          image-name: cod-devops # Provide Docker image name
           image-tag: 1.0.0 # Provide Docker image tag
-      #- name: Run
-       # uses: 
-      #- name: Inject report
-       # uses:
       
