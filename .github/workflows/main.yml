@@ -1,18 +1,26 @@
 name: main
 on: [push]
 jobs:
-  test-and-package:
-    runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-20.04
+    #steps:
+     # - name: Checkout
+      #  uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      #- name: Cypress run
+      #  uses: cypress-io/github-action@v2
+      #  with:
+      #    browser: chrome
+      #- uses: mosteo-actions/docker-run@v1
+      #  with:
+      #    image: cypress/included:8.3.1
+      #    # command: uname -a
+
+    # Docker image with Cypress pre-installed
+    # https://github.com/cypress-io/cypress-docker-images/tree/master/included
+    container: cypress/included:8.3.1
     steps:
       - uses: actions/checkout@v2
-      - name: Linter
-        uses: hadolint/hadolint-action@v1.5.0
-        with:
-          dockerfile: Dockerfile      
-      - name: Build & Package
-        uses: VaultVulp/gp-docker-action@1.2.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
-          image-name: cod-devops # Provide Docker image name
-          image-tag: 1.0.0 # Provide Docker image tag
+      - run: cypress run
       
