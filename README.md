@@ -61,11 +61,16 @@ El apiKey les llegara por mail a cada uno.
 
 # Comienzo de nuestro ReadMe (Lippia-Open-Challenge-2021)
 
+GitHub Actions pipeline builded for web apps testing. We're not using own Dockerfiles, so the focus is on the pipeline itself. 
+Thanks to Cypress "included" Docker image, we can run app test inside a container without the need to build it. The rest of the pipeline consist on the necesary steps to deliver the results to Lippia Report Server.
+
 ## Cypress runner
+
 
 ## Reference Links
 
 - https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/
 - https://github.com/bahmutov/cypress-gh-action-included
 - https://github.com/cypress-io/cypress-docker-images/blob/master/included/8.3.0/Dockerfile (base Dockerfile)
+- https://github.com/marketplace/actions/cypress-io#docker-image
 - 
