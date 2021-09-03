@@ -26,8 +26,14 @@
     "url": "https://github.com/Faku-Alcatraz/cod-devops/issues"
   },
   "homepage": "https://github.com/Faku-Alcatraz/cod-devops#readme",
-  "dependencies": {},
+  "dependencies": {
+    "cosmiconfig": "^7.0.1"
+  },
   "devDependencies": {
-    "cypress": "^8.3.1"
+    "cypress": "^8.3.1",
+    "cypress-cucumber-preprocessor": "^4.2.0"
+  },
+  "cypress-cucumber-preprocessor" : {
+    "nonGlobalStepDefinitions" : true
   }
 }

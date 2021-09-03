@@ -1,3 +1,6 @@
 {
+    "testFiles": "**/*.feature",
+
+
     "baseUrl" : "http://automationpractice.com"
 }
