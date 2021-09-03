@@ -1,0 +1,33 @@
+{
+  "name": "cod-devops",
+  "version": "1.0.0",
+  "description": "Challenge de Lippia usando Cypress",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faku-Alcatraz/cod-devops.git"
+  },
+  "keywords": [
+    "qa",
+    "challenge",
+    "lippia",
+    "cod-devops",
+    "devops"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Faku-Alcatraz/cod-devops/issues"
+  },
+  "homepage": "https://github.com/Faku-Alcatraz/cod-devops#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^8.3.1"
+  }
+}
