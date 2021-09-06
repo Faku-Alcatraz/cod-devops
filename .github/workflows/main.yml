@@ -3,25 +3,34 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
-    #steps:
-     # - name: Checkout
-      #  uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      #- name: Cypress run
-      #  uses: cypress-io/github-action@v2
-      #  with:
-      #    browser: chrome
-      #- uses: mosteo-actions/docker-run@v1
-      #  with:
-      #    image: cypress/included:8.3.1
-      #    # command: uname -a
-
-    # Docker image with Cypress pre-installed
-    # https://github.com/cypress-io/cypress-docker-images/tree/master/included
     container: cypress/included:8.3.1
     steps:
-      - uses: actions/checkout@v2
+      - name: Repo-Checkout
+        uses: actions/checkout@v2
       - run: npm install
       - run: cypress run
+      - name: Archive screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshot
+          path: /__w/cod-devops/cod-devops/cypress/screenshots/*
+      - name: Archive videos
+        uses: actions/upload-artifact@v2
+        with:
+          name: video
+          path: /__w/cod-devops/cod-devops/cypress/videos/*
+  #    - name: Archive test result
+  #      uses: actions/upload-artifact@v2
+  #      with:
+  #        name: result
+  #        path: output.log
+  #lippia-report:
+  #  runs-on: ubuntu-20.04
+  #  steps:
+  #    - name: Get test result
+  #      uses: actions/download-artifact@v2
+  #      with:
+  #        name: result
+
+
       
